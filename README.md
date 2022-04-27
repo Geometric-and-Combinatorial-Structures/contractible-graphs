@@ -11,7 +11,7 @@ gcc Connected_graphs.cpp -o Connected_graphs
 ```
 The output of the program (executable) `Connected_graphs` consist of 9 text files: `CG_num_1.txt`, ..., `CG_num_9.txt`. Such files can be found in the directory [Connected-graphs](./Connected-graphs).
 
-Each of these files contains a list of connected graphs, one file for each group of graphs with the same number of vertices, as well as an id for each connected graph and a condensed representation of its adjacency matrix. For example, at the beginning of the file [CG_num_7.txt](./Connected-graphs/CG_num_7.txt) can be found the following:
+Each of these files contains a list of connected graphs, one file for each group of graphs with the same number of vertices, as well as an id for each connected graph in a condensed representation of its adjacency matrix. For example, at the beginning of the file [CG_num_7.txt](./Connected-graphs/CG_num_7.txt) can be found the following:
 ```
 11
 7 6
@@ -78,7 +78,7 @@ gcc Contractible_graphs.cpp -o Contractible_graphs -lm
 Such script makes an exhaustive search in the files `CG_AM_1.txt`, ..., `CG_AM_9.txt`, looking for a collapsible graph but not a strong vertex I-contractible. No graph with such characteristics were found.
 
 ## Reduced graphs by I-contractible transformations
-As was stated in [Collapsibility and homological properties of I-contractible transformations](https://arxiv.org/abs/1808.07461) (_Algorithm 2_), the algorithm `Contractible_reduction` developed in the script ``Contractible_reduction`.cpp` reduce the 'strong vertex I-contractible' vertices in order to obtain another graph, with less vertices and edges but the same homotopy type (and same homology groups). Generate the executable as follows:
+As was stated in [Collapsibility and homological properties of I-contractible transformations](https://arxiv.org/abs/1808.07461) (_Algorithm 2_), the algorithm `Contractible_reduction` developed in the script `Contractible_reduction.cpp` reduce the 'strong vertex I-contractible' vertices in order to obtain another graph, with less vertices and edges but the same homotopy type (and same homology groups). The executable file can be compiled from the source file as follows:
 ```
 gcc Contractible_reduction.cpp -o Contractible_reduction
 ./Contractible_reduction
@@ -94,7 +94,7 @@ At the left in the next picture is the original graph, and at the right the redu
 ![image](https://user-images.githubusercontent.com/81319528/165278908-6b3b78e8-16e9-4840-8623-59f33b791744.png)
 
 ## Application to topological data analysis
-In the following animations is shown how the reduced graphs, from a family of graphs in a filtration, look like after the contractible reductions. Such filtered graphs and its clique complexes correspond to the filtered Vietoris-Rips complex commonly used in topological data analysis.
+In the following animations is shown how the reduced graphs, from a family of graphs in a filtration, look like after the contractible reductions. Such filtered graphs and its clique complexes correspond to the filtered Vietoris-Rips complex commonly used in topological data analysis. The mathematical foundations about the compatibility of the I-contractible reductions and the computing of persistent homology was established in [Collapsibility and homological properties of I-contractible transformations](https://arxiv.org/abs/1808.07461).
 
 https://user-images.githubusercontent.com/81319528/165279252-9696b62e-87dd-4db2-88d4-6de667ece0d3.mp4
 
