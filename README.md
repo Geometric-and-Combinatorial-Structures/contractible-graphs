@@ -1,17 +1,17 @@
 # I-Contractible graphs
-In this repository is shown how to implement the algorithms used in the article [Collapsibility and homological properties of I-contractible transformations](https://arxiv.org/abs/1808.07461), as well as in the work [Minimal graphs for contractible and dismantlable properties](https://arxiv.org/abs/2109.06729).
+In this repository we show how to implement the algorithms employed in the article [Collapsibility and homological properties of I-contractible transformations](https://arxiv.org/abs/1808.07461), as well as in the work [Minimal graphs for contractible and dismantlable properties](https://arxiv.org/abs/2109.06729).
 
-The following commands were executed under the operative system Debian GNU/Linux 11 and compiler `gcc (Debian 10.2.1-6) 10.2.1 20210110`. However, a graphical compiler like [this one](https://www.embarcadero.com) can be used.
+The following commands were executed using the operating system Debian GNU/Linux 11 and compiler `gcc (Debian 10.2.1-6) 10.2.1 20210110`. However, a graphical compiler such as [this one](https://www.embarcadero.com) can also be used.
 
 ## Connected graphs
-The workflow starts generating the family of connected graphs. To perform this task, can be used the script [Connected_graphs.cpp](./Connected_graphs.cpp). Execute in the command line the following:
+The workflow begins by generating the family of connected graphs. To perform this task, one can use the script [Connected_graphs.cpp](./Connected_graphs.cpp). To execute one should enter the following in the command line:
 ```
 gcc Connected_graphs.cpp -o Connected_graphs
 ./Connected_graphs
 ```
-The output of the program (executable) `Connected_graphs` consist of 9 text files: `CG_num_1.txt`, ..., `CG_num_9.txt`. Such files can be found in the directory [Connected-graphs](./Connected-graphs).
+The output of the program (executable) `Connected_graphs` consists of 9 text files: `CG_num_1.txt`, ..., `CG_num_9.txt`. These files can be found in the directory [Connected-graphs](./Connected-graphs).
 
-Each of these files contains a list of connected graphs, one file for each group of graphs with the same number of vertices, as well as an id for each connected graph in a condensed representation of its adjacency matrix. For example, at the beginning of the file [CG_num_7.txt](./Connected-graphs/CG_num_7.txt) can be found the following:
+Each of these files contains a list of connected graphs, one file for each collection of graphs with the same number of vertices. In addition, each graph is given a numerical id along with a condensed representation of its adjacency matrix. For example, at the beginning of the file [CG_num_7.txt](./Connected-graphs/CG_num_7.txt) can be found the following:
 ```
 11
 7 6
@@ -29,7 +29,7 @@ Each of these files contains a list of connected graphs, one file for each group
 154 1080320
 ...
 ```
-It means that there are 11 connected graphs with 7 vertices and 6 edges. The numbers from 144 to 154 at the first column indicates the number assigned (**id**) to each connected graph by the script `Connected_graphs.cpp`, and each number at the left (second column) indicates the number in base 10 of the upper triangular part of its adjacency matrix as follow: _For example, for the graph with id 154, its number is 1080320, which in base 2 is 100000111110000000000; then, for a graph on 7 vertices, such upper triangular part of the adjacency matrix is:_
+We see that there are 11 connected graphs with 7 vertices and 6 edges. The numbers from 144 to 154 in the first column indicate the number assigned (**id**) to each connected graph by the script `Connected_graphs.cpp`, and each number in the second column indicates the number (in base 10) of the upper triangular part of its adjacency matrix as follows: _For example, for the graph with id 154, its number is 1080320, which in base 2 is 100000111110000000000; then, for a graph on 7 vertices, such upper triangular part of the adjacency matrix is:_
 ```
 1 0 0 0 0 0
   1 1 1 1 1 
