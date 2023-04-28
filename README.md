@@ -29,7 +29,7 @@ Each of these files contains a list of connected graphs, one file for each colle
 154 1080320
 ...
 ```
-We see that there are 11 connected graphs with 7 vertices and 6 edges. The numbers from 144 to 154 in the first column indicate the number assigned (**id**) to each connected graph by the script `Connected_graphs.cpp`, and each number in the second column indicates the number (in base 10) of the upper triangular part of its adjacency matrix as follows: _For example, for the graph with id 154, its number is 1080320, which in base 2 is 100000111110000000000; then, for a graph on 7 vertices, such upper triangular part of the adjacency matrix is:_
+We see that there are 11 connected graphs with 7 vertices and 6 edges. The numbers from 144 to 154 in the first column indicate the number assigned (**id**) to each connected graph by the script `Connected_graphs.cpp`, and each number in the second column indicates the number (in base 10) of the upper triangular part of its adjacency matrix as follows: _For example, for the graph with id 154, the number is 1080320, which in base 2 is 100000111110000000000; hence for this graph on 7 vertices, the upper triangular part of the adjacency matrix is given by:_
 ```
 1 0 0 0 0 0
   1 1 1 1 1 
@@ -38,7 +38,7 @@ We see that there are 11 connected graphs with 7 vertices and 6 edges. The numbe
         0 0 
           0
 ```
-Hence, the adjacency matrix is:
+Hence, the adjacency matrix is given by:
 ```
 0 1 0 0 0 0 0
 1 0 1 1 1 1 1 
@@ -48,7 +48,7 @@ Hence, the adjacency matrix is:
 0 1 0 0 0 0 0
 0 1 0 0 0 0 0
 ```
-Actually, the computation made by `Connected_graphs.cpp` performs a relabeling of the vertices on each graph in such a way that the formed binary number (as we explained before) is maximal with respect to the lexicographic order.
+In fact, the computation made by `Connected_graphs.cpp` performs a relabeling of the vertices on each graph in such a way that the formed binary number (as we explained before) is maximal with respect to the lexicographic order.
 
 On the other hand, the adjacency matrices of the connected graphs in the files `CG_num_1.txt`, ..., `CG_num_9.txt` can be generated with the script `CG_num_to_AdjacencyMatrix.cpp`:
 ```
