@@ -78,7 +78,7 @@ gcc Contractible_graphs.cpp -o Contractible_graphs -lm
 This script makes an exhaustive search through the files `CG_AM_1.txt`, ..., `CG_AM_9.txt`, looking for a collapsible graph that is not strong vertex I-contractible. No such graph was found.
 
 ## Reduced graphs by I-contractible transformations
-As discussed in [Collapsibility and homological properties of I-contractible transformations](https://arxiv.org/abs/1808.07461) (_Algorithm 2_), the algorithm `Contractible_reduction` as implemented in the script `Contractible_reduction.cpp` removes the 'strong vertex I-contractible' vertices in order. In this way we obtain a graph with fewer vertices and edges, but preserve the homotopy type (and hence homology groups) of the underlying clique complexes. The executable file can be compiled from the source file as follows:
+As discussed in [Collapsibility and homological properties of I-contractible transformations](https://arxiv.org/abs/1808.07461) (_Algorithm 2_), the algorithm `Contractible_reduction` as implemented in the script `Contractible_reduction.cpp` removes the 'strong vertex I-contractible' vertices in order. In this way we obtain a graph with fewer vertices and edges, but in the process preserve the homotopy type (and hence homology groups) of the underlying clique complexes. The executable file can be compiled from the source file as follows:
 ```
 gcc Contractible_reduction.cpp -o Contractible_reduction
 ./Contractible_reduction
@@ -94,7 +94,7 @@ In the figure below, on the left we depict the original graph and on the right t
 ![image](https://user-images.githubusercontent.com/81319528/165278908-6b3b78e8-16e9-4840-8623-59f33b791744.png)
 
 ## Application to topological data analysis
-In the following animations we illustrate how the reduced graphs, from a family of graphs in a filtration, look like after the contractible reductions. Such filtered graphs and its clique complexes correspond to the filtered Vietoris-Rips complex commonly used in topological data analysis. The mathematical foundations about the compatibility of the I-contractible reductions and the computing of persistent homology was established in [Collapsibility and homological properties of I-contractible transformations](https://arxiv.org/abs/1808.07461).
+In the following animations we consider a family of graphs in a filtration (on the left), and on the right illustrate the results of applying the contractible reductions at each step. Such filtered graphs and their clique complexes correspond to the filtered Vietoris-Rips complex commonly used in topological data analysis. The mathematical foundations regarding the compatibility of the I-contractible reductions and the computation of persistent homology was established in [Collapsibility and homological properties of I-contractible transformations](https://arxiv.org/abs/1808.07461).
 
 https://user-images.githubusercontent.com/81319528/165279252-9696b62e-87dd-4db2-88d4-6de667ece0d3.mp4
 
